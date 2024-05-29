@@ -1,0 +1,391 @@
+<!-- <div class="main-cont">
+  <div class="header">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary nav-bar1">
+      <div class="container-fluid cont-fluid">
+        <div class="brand-container">
+          <img
+            src="/assets/images/Group 23.png"
+            style="background: transparent"
+            alt=""
+          />
+
+          <a class="navbar-brand open-sea" routerLink="home">OpenSea</a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          (click)="toggleSideNav()"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse collapse-div"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ul-text">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                style="size: 24px; line-height: 29.05px; color: #ffffff"
+                >Drops</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                style="size: 24px; line-height: 29.05px; color: #ffffff"
+                >Stats</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex search-area" role="search">
+            <img
+              src="/assets/images/Vector (4).png"
+              alt=""
+              style="
+                width: 24.35px;
+                height: 24.06px;
+                color: #ffffff;
+                background-color: rgba(120, 111, 41, 1);
+                margin-right: 5px;
+                margin-left: 15px;
+              "
+            />
+            <input
+              class="form-control me-2 search"
+              type="search"
+              placeholder="Search items,accounts and nft’s"
+              aria-label="Search"
+            />
+          </form>
+
+          <form class="d-flex payment-method">
+            <div class="form-control me-2 payIcon" aria-label="Search">
+              <a class="payment" href="#">Payment Method</a>
+              <img src="/assets/images/Vector.png" alt="" />
+            </div>
+          </form>
+
+          <button class="navbar-nav me-2 cart">
+            <img src="/assets/images/Vector (1).png" alt="" />
+          </button>
+
+          <button
+            type="button"
+            class="navbar-nav me-2 cart"
+            routerLink="user-auth"
+          >
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="side-nav" [ngClass]="{ show: showSideNav }">
+      <ul class="side-nav-list">
+        <li><a href="#">Drops</a></li>
+        <li><a href="#">Stats</a></li>
+      </ul>
+    </div>
+
+    <nav class="nav-bar2">
+      <div class="cont-fluid">
+        <div class="collapse-div">
+          <ul class="ul-text">
+            <li
+              [class.active]="activeIndex1 === 0"
+              (click)="setActive1(0)"
+              class=""
+            >
+              <a
+                href="#"
+                style="size: 24px; line-height: 29.05px; color: #ffffff"
+                >All</a
+              >
+            </li>
+            <li [class.active]="" (click)="setActive1(1)">
+              <a
+                href="#"
+                style="size: 24px; line-height: 29.05px; color: #ffffff"
+                >Art</a
+              >
+            </li>
+            <li [class.active]="activeIndex1 === 2" (click)="setActive1(2)">
+              <a
+                href="#"
+                style="size: 24px; line-height: 29.05px; color: #ffffff"
+                >Gaming</a
+              >
+            </li>
+            <li
+              [class.active]="activeIndex1 === 3"
+              (click)="setActive1(3)"
+              class="nav-item"
+            >
+              <a
+                href="#"
+                style="size: 24px; line-height: 29.05px; color: #ffffff"
+                >Memberships</a
+              >
+            </li>
+            <li
+              [class.active]="activeIndex1 === 4"
+              (click)="setActive1(4)"
+              class="nav-item"
+            >
+              <a
+                href="#"
+                style="size: 24px; line-height: 29.05px; color: #ffffff"
+                >PFPs</a
+              >
+            </li>
+            <li
+              [class.active]="activeIndex1 === 5"
+              (click)="setActive1(5)"
+              class="nav-item"
+            >
+              <a
+                href="#"
+                style="size: 24px; line-height: 29.05px; color: #ffffff"
+                >Photography</a
+              >
+            </li>
+            <li
+              [class.active]="activeIndex1 === 6"
+              (click)="setActive1(6)"
+              class="nav-item"
+            >
+              <a
+                href="#"
+                style="size: 24px; line-height: 29.05px; color: #ffffff"
+                >Music</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="toggle-btn-2 copy-nav">
+      <owl-carousel-o [options]="customOptionsNavBar" class="photos">
+        <ng-template carouselSlide>
+          <div class="trending-top">
+            <li
+              class="active"
+              [class.active]="activeIndex2 === 0"
+              (click)="setActive2(0)"
+            >
+              <a
+                href="#"
+                style="size: 24px; line-height: 29.05px; color: #000000"
+                >All</a
+              >
+            </li>
+            <li [class.active]="activeIndex2 === 1" (click)="setActive2(1)">
+              <a
+                href="#"
+                style="size: 24px; line-height: 29.05px; color: #000000"
+                >Art</a
+              >
+            </li>
+            <li [class.active]="activeIndex2 === 2" (click)="setActive2(2)">
+              <a
+                href="#"
+                style="size: 24px; line-height: 29.05px; color: #000000"
+                >Memberships</a
+              >
+            </li>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="trending-top">
+            <li [class.active]="activeIndex2 === 3" (click)="setActive2(3)">
+              <a
+                href="#"
+                style="size: 24px; line-height: 29.05px; color: #000000"
+                >Gaming</a
+              >
+            </li>
+            <li [class.active]="activeIndex2 === 4" (click)="setActive2(4)">
+              <a
+                href="#"
+                style="size: 24px; line-height: 29.05px; color: #000000"
+                >PFPs</a
+              >
+            </li>
+            <li [class.active]="activeIndex2 === 5" (click)="setActive2(5)">
+              <a
+                href="#"
+                style="size: 24px; line-height: 29.05px; color: #000000"
+                >Photography</a
+              >
+            </li>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="trending-top">
+            <li [class.active]="activeIndex2 === 6" (click)="setActive2(6)">
+              <a
+                href="#"
+                style="size: 24px; line-height: 29.05px; color: #000000"
+                >Music</a
+              >
+            </li>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+
+    <owl-carousel-o [options]="customOptions" class="photos">
+      <ng-template carouselSlide>
+        <div class="card card1">
+          <img
+            src="/assets/images/Rectangle 5.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Man’s AI</h5>
+            <p class="card-text">Floor: 0.01 ETH</p>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="card card2">
+          <img
+            src="/assets/images/Rectangle 6 (1).png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Hairy_Girl</h5>
+            <p class="card-text">Floor: 0.10 ETH</p>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="card card3">
+          <img
+            src="/assets/images/Rectangle 7.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Man’s AI</h5>
+            <p class="card-text">Floor: 0.03 ETH</p>
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</div>
+<nav class="toggle-btn">
+  <ul class="ul-text">
+    <div class="trending-top">
+      <li
+        class="active"
+        [class.active]="activeIndex2 === 0"
+        (click)="setActive2(0)"
+      >
+        <a href="#" style="size: 24px; line-height: 29.05px; color: #000000"
+          >Trending</a
+        >
+      </li>
+      <li [class.active]="activeIndex2 === 1" (click)="setActive2(1)">
+        <a href="#" style="size: 24px; line-height: 29.05px; color: #000000"
+          >Top</a
+        >
+      </li>
+    </div>
+    <div class="time">
+      <div class="time-section">
+        <li [class.active]="activeIndex3 === 0" (click)="setActive3(0)">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="#"
+            style="
+              size: 24px;
+              line-height: 29.05px;
+              color: #000000;
+              opacity: 66%;
+            "
+            >1h</a
+          >
+        </li>
+        <li [class.active]="activeIndex3 === 1" (click)="setActive3(1)">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="#"
+            style="
+              size: 24px;
+              line-height: 29.05px;
+              color: #000000;
+              opacity: 66%;
+            "
+            >6h</a
+          >
+        </li>
+        <li
+          class="active"
+          [class.active]="activeIndex3 === 2"
+          (click)="setActive3(2)"
+        >
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="#"
+            style="size: 24px; line-height: 29.05px; color: #000000"
+            >24h</a
+          >
+        </li>
+        <li [class.active]="activeIndex3 === 3" (click)="setActive3(3)">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="#"
+            style="
+              size: 24px;
+              line-height: 29.05px;
+              color: #000000;
+              opacity: 66%;
+            "
+            >7d</a
+          >
+        </li>
+      </div>
+      <li class="toggle-item1">
+        <a
+          class="nav-link active"
+          aria-current="page"
+          href="#"
+          style="size: 24px; line-height: 29.05px; color: #000000"
+          >All chains
+          <img
+            src="/assets/images/Vector (13).png"
+            alt=""
+            style="color: #070000"
+        /></a>
+      </li>
+      <li class="toggle-item2">
+        <a
+          class="nav-link active"
+          aria-current="page"
+          href="#"
+          style="size: 24px; line-height: 29.05px; color: #000000"
+          >View all</a
+        >
+      </li>
+    </div>
+  </ul>
+</nav> -->

@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+body{
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+.toggle-btn-2 .owl-nav .owl-prev, .toggle-btn-2 .owl-nav .owl-next {
+  height: 40px !important;
+  width: 40px !important;
+  background-color: none !important;
+  position: absolute !important;
+  top: 0% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+}
+.toggle-btn-2 .owl-nav .owl-prev{
+  left: 0;
+
+}
+.toggle-btn-2 .owl-nav .owl-next{
+  right: 0;
+}
+.toggle-btn-2 .owl-nav .owl-prev i{
+  color: black;
+
+}
+.toggle-btn-2 .owl-nav .owl-next i{
+  color: black;
+} 
+.owl-nav :hover{
+  background-color: transparent !important;
+}
+.owl-nav .disabled i{
+  display: none !important;
+  background: transparent !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

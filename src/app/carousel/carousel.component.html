@@ -1,0 +1,147 @@
+<div class="container-fluid">
+    <div [ngSwitch]="type" class="heading" data-aos="fade-up" data-aos-delay="100">
+        <ng-container *ngSwitchCase="'firstCarousel'">
+            <div class="content">Notable Collections</div>
+        </ng-container>
+        <ng-container *ngSwitchCase="'secondCarousel'">
+            <div class="cont">
+                <div class="content">NFT’s 101</div>
+                <div class="content2">Learn More</div>
+            </div>
+        </ng-container>
+        <ng-container *ngSwitchCase="'thirdCarousel'">
+            <div class="content">Explore Categories</div>
+        </ng-container>
+    </div>
+
+    <owl-carousel-o [ngSwitch]="type" [options]="customOptions" class="owl-carousel carouselError" data-aos="fade-up" data-aos-delay="100">
+        <ng-container *ngSwitchCase="'firstCarousel'">
+
+            <ng-container>
+                <ng-template carouselSlide class="carousel-content">
+                    <div class="slice-1">
+                        <img [src]="firstData[0].image" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="top-content">
+                                <h5 class="card-title">{{firstData[0].title}}</h5>
+                                <img src="/assets/images/Vector (11).png" alt=""
+                                    style="height: 8px;width: 8px; border-radius: 50%; background-color: rgb(18, 53, 214); margin-left: 4px;">
+                            </div>
+                            <div class="buttom-content">
+                                <div class="left-content">
+                                    <p>{{firstData[0].floor}}</p>
+                                    <h3>{{firstData[0].eth1}}</h3>
+                                </div>
+                                <div class="right-content">
+                                    <p>{{firstData[0].volume}}</p>
+                                    <h3>{{firstData[0].eth2}}</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="slice-1">
+                        <img [src]="firstData[1].image" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="top-content">
+                                <h5 class="card-title">Edit By Cam</h5>
+                            </div>
+                            <div class="buttom-content">
+                                <div class="left-content">
+                                    <p>{{firstData[1].floor}}</p>
+                                    <h3>{{firstData[1].eth1}}</h3>
+                                </div>
+                                <div class="right-content">
+                                    <p>{{firstData[1].volume}}</p>
+                                    <h3>{{firstData[1].eth2}}</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="slice-1">
+                        <img [src]="firstData[2].image" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="top-content">
+                                <h5 class="card-title">Edit By Cam</h5>
+                            </div>
+                            <div class="buttom-content">
+                                <div class="left-content">
+                                    <p>{{firstData[2].floor}}</p>
+                                    <h3>{{firstData[2].eth1}}</h3>
+                                </div>
+                                <div class="right-content">
+                                    <p>{{firstData[2].volume}}</p>
+                                    <h3>{{firstData[2].eth2}}</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </ng-container>
+        </ng-container>
+        <ng-container *ngSwitchCase="'secondCarousel'" class="secondCarousel">
+
+            <ng-container>
+                <ng-template carouselSlide>
+                    <div class="slice-2">
+                        <img [src]="secondData[0].image" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{secondData[0].title}}</h5>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="slice-2">
+                        <img [src]="secondData[1].image" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{secondData[1].title}}</h5>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="slice-2">
+                        <img [src]="secondData[2].image" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{secondData[2].title}}</h5>
+                        </div>
+                    </div>
+                </ng-template>
+
+            </ng-container>
+        </ng-container>
+        <ng-container *ngSwitchCase="'thirdCarousel'" class="thirdCarousel">
+
+            <ng-container>
+                <ng-template carouselSlide>
+                    <div class="slice-3">
+                        <img src="/assets/images/Rectangle 25.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Art</h5>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="slice-3">
+                        <img src="/assets/images/Rectangle 26.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Gaming</h5>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="slice-3">
+                        <img src="/assets/images/Rectangle 27.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Photography</h5>
+                        </div>
+                    </div>
+                </ng-template>
+            </ng-container>
+        </ng-container>
+    </owl-carousel-o>
+</div>
+
+   
