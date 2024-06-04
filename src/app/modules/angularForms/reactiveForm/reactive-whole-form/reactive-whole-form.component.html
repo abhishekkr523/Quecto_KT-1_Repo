@@ -1,0 +1,72 @@
+<body>
+  <div class="cont">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" formControlName="name" />
+        <div
+          class="validation-error"
+          *ngIf="
+            contactForm.get('name')!.invalid && contactForm.get('name')!.touched
+          "
+        >
+          <div *ngIf="contactForm.get('name')!.errors?.['required']">
+            Name is required
+          </div>
+          <div *ngIf="contactForm.get('name')!.errors?.['minlength']">
+            Name must be at least 3 characters long
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" />
+        <div
+          class="validation-error"
+          *ngIf="
+            contactForm.get('email')!.invalid &&
+            contactForm.get('email')!.touched
+          "
+        >
+          <div *ngIf="contactForm.get('email')!.errors?.['required']">
+            Email is required
+          </div>
+          <div *ngIf="contactForm.get('email')!.errors?.['email']">
+            Invalid email format
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" formControlName="message"></textarea>
+        <div
+          class="validation-error"
+          *ngIf="
+            contactForm.get('message')!.invalid &&
+            contactForm.get('message')!.touched
+          "
+        >
+          <div *ngIf="contactForm.get('message')!.errors?.['required']">
+            Message is required
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+    </form>
+
+    <!-- <input type="text"  [formControl]="name">
+   <div *ngIf="name.dirty ">dirty</div>
+   <div *ngIf="name.pristine ">pristine</div>
+   <div *ngIf="name.valid ">valid</div>
+   <div *ngIf="name.touched ">touch</div>
+
+   <input type="text"  [formControl]="password">
+
+   <h2>{{name.value}}</h2>
+   <h2>{{password.value}}</h2>
+   <button (click)="fun()">submit</button> -->
+  </div>
+</body>

@@ -1,0 +1,30 @@
+ <body>
+  <!--<div class="cont">
+    <input
+      type="text"
+      [(ngModel)]="text"
+      (ngModelChange)="ngModelChange(text)"
+    />
+    <p>Using ngmodel = {{ text }}</p>
+  </div> -->
+
+  <!-- <div class="cont">
+    <input type="text" [formControl]="inputText" (change)="aChange()" />
+    <p>using formControl = {{ inputText.value }}</p>
+  </div> -->
+
+  <!-- <div class="cont">
+    <input type="text" (input)="onInputChange($event)" />
+    <p>using inputEvent = {{ name }}</p>
+  </div> -->
+
+  <div class="cont">
+    <h2>Approaches of twoWay bonding</h2>
+    <form [formGroup]="myForm">
+      <input formControlName="textInput" (input)="onTextChange()" />
+      <p>
+        Using FormGroup and FormBuilder = {{ myForm.get("textInput")?.value }}
+      </p>
+    </form>
+  </div>
+</body>

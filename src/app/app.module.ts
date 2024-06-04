@@ -11,12 +11,14 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import{BrowserAnimationsModule}from'@angular/platform-browser/animations';
 import { CarouselComponent } from './carousel/carousel.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatDialogActions, MatDialogClose } from '@angular/material/dialog';
 import { FeatureModule } from './modules/feature/feature.module';
 import { RouterEventsService } from './services/router-events.service';
-
+import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component';
+import { AngularFormsModule } from './modules/angularForms/angularForms.module';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { RouterEventsService } from './services/router-events.service';
     MainComponent,
     CarouselComponent,
     UserAuthComponent,
+    ChildComponent,
+    ParentComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,9 @@ import { RouterEventsService } from './services/router-events.service';
     FormsModule,
     MatDialogClose,
     MatDialogActions,
-    FeatureModule
+    FeatureModule,
+    ReactiveFormsModule,
+    AngularFormsModule
   ],
  
   providers: [

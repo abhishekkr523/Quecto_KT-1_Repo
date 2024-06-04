@@ -1,0 +1,30 @@
+<body>
+  <div class="cont">
+    <div class="form-group">
+      <label for="username">Enter Username</label>
+      <input
+        type="text"
+        id="username"
+        class="form-control"
+        [formControl]="usernameControl"
+      />
+      aaa{{ usernameControl.value }}
+      <div
+        *ngIf="
+          usernameControl.invalid &&
+          (usernameControl.dirty || usernameControl.touched)
+        "
+      >
+        <div *ngIf="usernameControl.errors?.['required']">
+          Username is required.
+        </div>
+        <div *ngIf="usernameControl.errors?.['minlength']">
+          Username must be at least 3 characters long.
+        </div>
+        <div *ngIf="usernameControl.errors?.['maxlength']">
+          Username cannot be longer than 12 characters.
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

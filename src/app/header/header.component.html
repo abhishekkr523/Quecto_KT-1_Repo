@@ -114,16 +114,16 @@
             </li>
             <li [class.active]="activeIndex1 === 1" (click)="setActive1(1)">
               <a
-              routerLink="feature/art"
+              routerLink="form/twoWayBinding"
                 style="size: 24px; line-height: 29.05px; color: #ffffff"
-                >Art</a
+                >TwoWay Binding</a
               >
             </li>
             <li [class.active]="activeIndex1 === 2" (click)="setActive1(2)">
               <a
-              routerLink="feature/gaming"
+              routerLink="form/tdfSingleInputField"
                 style="size: 24px; line-height: 29.05px; color: #ffffff"
-                >Gaming</a
+                >Td-SingleInputField</a
               >
             </li>
             <li
@@ -132,9 +132,9 @@
               class="nav-item"
             >
               <a
-              routerLink="feature/memberships"
+              routerLink="form/tdfWholeForm"
                 style="size: 24px; line-height: 29.05px; color: #ffffff"
-                >Memberships</a
+                >Td-WholeForm</a
               >
             </li>
             <li
@@ -143,9 +143,9 @@
               class="nav-item"
             >
               <a
-              routerLink="feature/pfps"
+              routerLink="form/reactiveSingleInputField"
                 style="size: 24px; line-height: 29.05px; color: #ffffff"
-                >PFPs</a
+                >Reactive-SingleInputField</a
               >
             </li>
             <li
@@ -154,9 +154,9 @@
               class="nav-item"
             >
               <a
-              routerLink="feature/photography"
+              routerLink="form/reactiveWholeForm"
                 style="size: 24px; line-height: 29.05px; color: #ffffff"
-                >Photography</a
+                >Reactive-WholeForm</a
               >
             </li>
             <li
@@ -165,11 +165,22 @@
               class="nav-item"
             >
               <a
-              routerLink="feature/music"
+              routerLink="form/DynamicValidationAndUpdationComponent"
                 style="size: 24px; line-height: 29.05px; color: #ffffff"
-                >Music</a
+                >DynamicValidationAndUpdationComponent</a
               >
             </li>
+            <li
+            [class.active]="activeIndex1 === 7"
+            (click)="setActive1(7)"
+            class="nav-item"
+          >
+            <a
+            routerLink="form/formArray"
+              style="size: 24px; line-height: 29.05px; color: #ffffff"
+              >Form Array</a
+            >
+          </li>
           </ul>
         </div>
       </div>
@@ -245,7 +256,7 @@
       </owl-carousel-o>
     </div>
 
-    <owl-carousel-o [options]="customOptions" class="photos">
+    <!-- <owl-carousel-o [options]="customOptions" class="photos">
       <ng-template carouselSlide>
         <div class="card card1">
           <img
@@ -285,10 +296,10 @@
           </div>
         </div>
       </ng-template>
-    </owl-carousel-o>
+    </owl-carousel-o> -->
   </div>
 </div>
-<nav class="toggle-btn">
+<!-- <nav class="toggle-btn">
   <ul class="ul-text">
     <div class="trending-top">
       <li
@@ -388,4 +399,4 @@
       </li>
     </div>
   </ul>
-</nav>
+</nav> -->

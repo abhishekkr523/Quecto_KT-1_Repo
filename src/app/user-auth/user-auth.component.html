@@ -1,19 +1,24 @@
-<div class="outer-div d-flex align-item-center justify-content-center ">
-  <form #data="ngForm" class=" p-5" *ngIf="showSignup" (ngSubmit)="signupData(data.value)">
+<div class="outer-div d-flex align-item-center justify-content-center">
+  <form
+    #data="ngForm"
+    class="p-5"
+    *ngIf="showSignup"
+    (ngSubmit)="signupData(data.value)"
+  >
     <h2 style="text-decoration: underline" class="text-light">Sign-Up</h2>
     <div class="mb-3">
-        <label for="exampleInputText" class="form-label text-light"
-          >User name</label
-        >
-        <input
-          type="text"
-          class="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
-          name="userName"
-          ngModel required
-        />
-      </div>
+      <label for="exampleInputText" class="form-label text-light"
+        >User name</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        aria-describedby="emailHelp"
+        name="userName"
+        ngModel
+        required
+      />
+    </div>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label text-light"
         >Email address</label
@@ -21,10 +26,10 @@
       <input
         type="email"
         class="form-control"
-        id="exampleInputEmail1"
         aria-describedby="emailHelp"
         name="email"
-        ngModel required
+        ngModel
+        required
       />
       <div id="emailHelp" class="form-text text-light">
         We'll never share your email with anyone else.
@@ -34,51 +39,67 @@
       <label for="exampleInputPassword1" class="form-label text-light"
         >Password</label
       >
-      <input type="password" class="form-control" id="exampleInputPassword1" name="password" ngModel required />
+      <input
+        type="password"
+        class="form-control"
+        name="password"
+        ngModel
+        required
+      />
     </div>
     <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+      <input type="checkbox" class="form-check-input"  />
       <label class="form-check-label text-light" for="exampleCheck1 "
         >Check me out</label
       >
     </div>
-    <button type="submit" class="btn btn-light text-dark" mat-dialog-close>Submit</button>
+    <button type="submit" class="btn btn-light text-dark" mat-dialog-close>
+      Submit
+    </button>
     <button class="btn btn-light text-dark" mat-dialog-close>Close</button>
-    <p (click)="openLogin()" style="color: blue;">Go for Sign-In.</p>
+    <p (click)="openLogin()" style="color: blue">Go for Sign-In.</p>
   </form>
 
-  <form class="p-5" *ngIf="showLogin" #data="ngForm" (ngSubmit)="loginData(data.value)">
-    <h2 style="text-decoration: underline" class="text-light">Sign-In</h2>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label text-light"
-        >Email address</label
-      >
-      <input
-        type="email"
-        class="form-control"
-        id="exampleInputEmail1"
-        aria-describedby="emailHelp"
-        name="email"
-        ngModel required
-      />
-      <div id="emailHelp" class="form-text text-light">
-        We'll never share your email with anyone else.
+  <div *ngIf="showLogin">
+    <form class="p-5" [formGroup]="loginReactiveData" (ngSubmit)="loginData()">
+      <h2 style="text-decoration: underline" class="text-light">Sign-In</h2>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label text-light"
+          >Email address</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          aria-describedby="emailHelp"
+          name="email"
+          formControlName="email"
+        />
+        <div id="emailHelp" class="form-text text-light">
+          We'll never share your email with anyone else.
+        </div>
       </div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label text-light"
-        >Password</label
-      >
-      <input type="password" class="form-control" id="exampleInputPassword1" name="password" ngModel required/>
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-      <label class="form-check-label text-light" for="exampleCheck1 "
-        >Check me out</label
-      >
-    </div>
-    <button type="submit" class="btn btn-light text-dark" mat-dialog-close>Submit</button>
-    <button class="btn btn-light text-dark" mat-dialog-close>Close</button>
-    <p (click)="openSignUp()" style="color: blue;">Go for Sign-Up.</p>
-  </form>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label text-light"
+          >Password</label
+        >
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          formControlName="password"
+        />
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input"  />
+        <label class="form-check-label text-light" for="exampleCheck1 "
+          >Check me out</label
+        >
+      </div>
+      <button type="submit" class="btn btn-light text-dark" mat-dialog-close>
+        Submit
+      </button>
+      <button class="btn btn-light text-dark" mat-dialog-close>Close</button>
+      <p (click)="openSignUp()" style="color: blue">Go for Sign-Up.</p>
+    </form>
+  </div>
 </div>

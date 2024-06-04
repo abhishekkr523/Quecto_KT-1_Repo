@@ -1,0 +1,18 @@
+<body>
+  <div class="cont">
+    <form [formGroup]="emailForm" (ngSubmit)="submit()">
+      <div formArrayName="emails">
+        <div *ngFor="let email of emails.controls; let i = index">
+          <input [formControlName]="i" placeholder="Enter email" />
+          <button type="button" (click)="removeEmail(i)">Remove</button>
+          <button type="button" (click)="insertEmail(i)">Insert After</button>
+        </div>
+      </div>
+      <br />
+      <br />
+      <button type="button" (click)="addEmail()">Add Email</button>
+      <button type="button" (click)="clearEmails()">Clear All</button>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>

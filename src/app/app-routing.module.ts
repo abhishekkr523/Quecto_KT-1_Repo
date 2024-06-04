@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { guardGuard } from './guard/guard.guard';
 import { FooterComponent } from './footer/footer.component';
 import { canDeactiveGuard } from './guard/can-deactive.guard';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 const routes: Routes = [
   {
@@ -26,6 +28,9 @@ const routes: Routes = [
     path:"user-auth", component:UserAuthComponent
   },
   { path: 'feature', loadChildren: () => import('./modules/feature/feature.module').then(m => m.FeatureModule) },
+  { path: 'form', loadChildren: () => import('./modules/angularForms/angularForms.module').then(m => m.AngularFormsModule) },
+  {path:"parent", component:ParentComponent},
+  {path:"child", component:ChildComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes,

@@ -1,0 +1,46 @@
+<body>
+  <!-- <div class="cont">
+    <h2>Dynamic validation and Updation in form</h2>
+    <input type="text" [formControl]="userName" />
+    <div>
+      <p>{{ userName.value }}</p>
+    </div>
+    <button (click)="changeFormControl()">Submit</button>
+  </div> -->
+
+  <!-- <div class="cont">
+    <h2>Dynamic validation and Updation in form</h2>
+    <input type="text" [formControl]="userName" />
+    {{userName.value}}
+    <div *ngIf="userName.invalid && (userName.dirty || userName.touched)">
+      <p *ngIf="userName.errors?.['required']">userName is required</p>
+    </div>
+    <button (click)="changeValidation()">Submit</button>
+  </div> -->
+
+  <!-- <div class="cont">
+    <h2>Dynamic validation and Updation in form</h2>
+<input type="text" [formControl]="userName">
+<div *ngIf="userName.invalid && (userName.dirty || userName.touched)">
+<p *ngIf="userName.errors?.['required']"> userName is required</p>
+</div>
+<button (click)="clearValidation()">Remove Validation</button>
+</div> -->
+
+  <!-- <div class="cont">
+    <h2>Dynamic validation and Updation in form</h2>
+<input type="text" [formControl]="inputData">
+<div>
+<p *ngIf="metersControl.value"> {{metersControl.value}} meter into {{centimetersControl}} centimeter</p>
+</div>
+</div> -->
+
+  <div class="cont">
+    <h2>Dynamic validation and Updation in form</h2>
+  <input type="text" [formControl]="inputData" />
+  <div *ngIf="inputData.invalid && (inputData.dirty || inputData.touched)">
+    <p *ngIf=" inputData.errors?.['required']">This is Required Field</p>
+  </div>
+  <button (click)="submit()"> Submit</button>
+</div>
+</body>
